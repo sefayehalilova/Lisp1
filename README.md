@@ -44,13 +44,13 @@
 Решение:  
 ```diff
 
-(defun scal-prod (v1 v2)
+(defun cross-prod (v1 v2)
    (if (or (null v1)(null v2)) 0   
-   (+ (* (car v1) (car v2)) ( scal-prod(cdr v1) (cdr v2)))))
+   (+ (* (car v1) (car v2)) ( cross-prod(cdr v1) (cdr v2)))))
 ```   
 Результат:  
 ```diff
-(print(scal-prod '(4 7) '(2 9)))  
+(print(cross-prod '(4 7) '(2 9)))  
 71
 ```   
 Задача 4 (18)  
