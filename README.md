@@ -29,29 +29,11 @@
 Определите функцию, разделяющую исходный список на два подсписка. В первый из них должны попасть элементы с нечетными номерами, во второй - элементы с четными номерами.  
 Решение:  
 ```diff  
-(defun srt (lst) 
-    ((lambda (head) 
-       (cond ((null head) lst) 
-                      (t (print(setq nlst (srt (cddr lst)))) 
-                        (list 
-                         (print(cons head (car nlst))) 
-                         (print(cons (cadr lst) (cadr nlst))) 
-                         )
-                      ) 
-       ) 
-     )            
-      (car lst)
- 
-    )
-)
-(print (srt `(a b c d e f g)))
 
 ```   
 Результат 1:  
 ```diff  
-(print (srt `(a b c d e f g q)))  
 
-((A C E G) (B D F Q))
 ```  
 Задача 3 (15)  
 -----------------  
