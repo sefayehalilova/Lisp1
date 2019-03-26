@@ -4,4 +4,5 @@
 	(list(list (cddr abc) (cadr abc)) (car abc))
 )
   
-  (print(obr `(a b c)))
+;(print(obr `(a b c)))
+;(((C) B) A)
