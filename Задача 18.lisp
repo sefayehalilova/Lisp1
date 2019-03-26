@@ -6,5 +6,7 @@
      )
 )
 
-(print (single-level '(4 6 2))) 
-(print (single-level '(4 (6 2)))) 
+;(print (single-level '(4 6 2)))
+;T
+;(print (single-level '(4 (6 2)))) 
+;NIL
