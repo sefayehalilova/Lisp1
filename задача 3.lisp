@@ -4,7 +4,7 @@
     ((lambda (x)(and (setq first (car x)) (setq last (cdr x))))w)
       (cond ((null w) nil)
          ((equal first n) (cons m (repl last n m)))
-         (t (cons first (repl last n m)))
+         ((cons first (repl last n m)))
        )
  )
 
