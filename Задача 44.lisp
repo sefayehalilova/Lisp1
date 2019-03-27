@@ -4,7 +4,7 @@
     ((lambda (x)(and (setq first (car x)) (setq last (cdr x))))v1)
      (cond((null v1) nil)
        ((atom first) (trees last v2))
-       ( t(if (equal first v2) 
+       ( (if (equal first v2) 
            t(or (trees first v2) (trees last v2)))
        )
       )
