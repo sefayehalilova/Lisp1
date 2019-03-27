@@ -2,7 +2,7 @@
 
 (defun single-level(str)
    (cond((null str) T)
-     (T (and (atom (car str)) (single-level (cdr str))))
+     ((and (atom (car str)) (single-level (cdr str))))
      )
 )
 
