@@ -1,12 +1,18 @@
 ;Определите функцию, заменяющую в исходном списке все вхождения заданного значения другим 
 
-(defun repl (w n m)
-    ((lambda (x)(and (setq first (car x)) (setq last (cdr x))))w)
-      (cond ((null w) nil)
+
+(defun repl (str n m) 
+    ((lambda (first last) 
+       (cond ((null str) nil) 
          ((equal first n) (cons m (repl last n m)))
-         ((cons first (repl last n m)))
-       )
- )
+         ((cons first (repl last n m)))             
+       ) 
+     )            
+      (car str) (cdr str)  
+ 
+    )
+)
+
 
 ;(print(repl '(2 4 3 6 7 ) 6 7))
 ;(2 4 3 7 7)
