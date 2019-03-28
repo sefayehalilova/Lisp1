@@ -1,17 +1,17 @@
 ;Определите функцию, заменяющую в исходном списке все вхождения заданного значения другим 
 
-
-(defun repl (str n m) 
+(defun repl (str &key x y) 
     ((lambda (first last) 
        (cond ((null str) nil) 
-         ((equal first n) (cons m (repl last n m)))
-         ((cons first (repl last n m)))             
+         ((equal first x) (cons y (repl last :x :y)))
+         (t(cons first (repl last :x :y)))             
        ) 
-     )            
+      )            
       (car str) (cdr str)  
  
     )
 )
+
 
 
 ;(print(repl '(2 4 3 6 7 ) 6 7))
