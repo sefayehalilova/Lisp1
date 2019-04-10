@@ -15,7 +15,7 @@
     )
 )
 
-;(print(trees '((a (b(c))) h m) '(a (b (c)))))
+;(print(trees '((a (b(c))) (h)) '(a (b (c)))))
 ;T
-;(print(trees '((a (b(c))) h (m(l))) '(a b c))) 
+;(print(trees '((a (b(c))) (m(l))) '(a b c))) 
 ;NIL
