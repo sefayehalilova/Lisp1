@@ -1,11 +1,17 @@
 ;Определите функцию (ЛУКОВИЦА n), строящую N-уровневый вложенный список, элементом которого на самом глубоком уровне является N.
 
 
-(defun onion (n &optional (m 1) (l '(1))) 
-    (if (= n m)l           
-        (cons (onion n (+ 1 m) (cons n ())) () 
-         )
-     )
+(defun onion (n)
+  (defun onion1 (petal n) 
+   (cond ((= petal n) (list n))
+           (t (list (onion1 (+ petal 1) n)))
+                
+    )
+   )
+                (
+                    onion1 1 n
+                )
+            	
 )
 
 
